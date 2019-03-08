@@ -1,7 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
-#include <Servo.h>
 
 // Replace with your network credentials
 const char* ssid = "Vectra-WiFi-260244";//type your ssid
@@ -15,9 +14,7 @@ int ledB = 12; // blue Led
 int ledG = 13; // green Led
 int ledR = 15; // red Led
 //********************************************
-int s = 16; // servo
 
-Servo servo;
 
 void setup(void){
       Serial.begin(9600); //Ustawienie prędkości transmisji
@@ -54,9 +51,6 @@ void setup(void){
 //  page += "<p><a href=\"Faster\"><button>Faster</button></a>&nbsp;<a href=\"Slower\"><button>Slower</button></a></p>";
  // page += "<p><a href=\"Left\"><button>Left</button></a>&nbsp;<a href=\"Right\"><button>Right</button></a></p>";
   //configure GPIO
-  servo.attach(s); 
-  int pos = 0;
-  servo.write(pos);
   pinMode(ledR, OUTPUT);
 
   delay(1000);
